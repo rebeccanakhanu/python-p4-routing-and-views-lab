@@ -24,7 +24,7 @@ class TestApp:
     def test_print_text(self):
         '''displays text of route in browser.'''
         response = app.test_client().get('/print/hello')
-        assert(response.data.decode() == 'hello')
+        assert(response.data.decode() == '<h2>printed string:hello</h2>')
 
     def test_print_text_in_console(self):
         '''displays text of route in console.'''
